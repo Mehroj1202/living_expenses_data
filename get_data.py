@@ -10,10 +10,9 @@ def get_data(file_path: str) -> dict:
     Returns:
         dict: dictionary of data
     """
-    pass
-
-
-# test
-file_path = "data.json"
-data = get_data(file_path)
-print(data)
+    
+    f=open(file_path,mode='r',encoding='utf-8')
+    a=f.read()
+    b=json.loads(a)
+    return b
+get_data('data.json')
